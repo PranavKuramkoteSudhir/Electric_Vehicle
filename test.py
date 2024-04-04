@@ -19,6 +19,8 @@ caf_eligibility_counts = df.groupby(['County', 'Clean Alternative Fuel Vehicle (
 
 app = dash.Dash(__name__)
 
+server = app.server
+
 # Define a common style for all titles
 title_style = {'textAlign': 'center', 'margin': '20px 0', 'fontSize': '22px'}
 
@@ -149,4 +151,4 @@ def update_output(n_clicks, input_make, input_model):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True, host='0.0.0.0', port=8050)
+    app.run_server(debug=True)
