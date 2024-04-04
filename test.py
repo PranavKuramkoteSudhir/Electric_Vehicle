@@ -7,9 +7,7 @@ from dash import dash_table
 from dash.exceptions import PreventUpdate
 
 path = 'Electric_Vehicle_Population_Data.csv'
-df1 = pd.read_csv(path)
-df1 = df1.dropna(subset=['Vehicle Location'])
-df = df1.head(2500)  # Adjust the number for your needs
+df = pd.read_csv(path)
 df[['lon', 'lat']] = df['Vehicle Location'].str.extract(r'POINT \(([^ ]+) ([^ ]+)\)')
 df['lat'] = pd.to_numeric(df['lat'])
 df['lon'] = pd.to_numeric(df['lon'])
