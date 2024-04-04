@@ -8,4 +8,4 @@ dash_core_components
 dash_html_components
 dash_leaflet
 dash_table
-# -e .
+gunicorn
